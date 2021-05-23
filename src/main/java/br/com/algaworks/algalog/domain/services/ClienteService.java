@@ -13,6 +13,11 @@ public class ClienteService {
 
     private ClienteRepository clienteRepository;
 
+    public Cliente getCliente(Long id) {
+        return clienteRepository.findById(id)
+                .orElseThrow(() -> new NegocioException("Cliente não encontrado"));
+    }
+
     @Transactional
     public Cliente salvar(Cliente cliente) {
         Boolean emailEmUso = clienteRepository.findByEmail(cliente.getEmail()).stream().anyMatch(clienteEncontrado -> !clienteEncontrado.equals(cliente));

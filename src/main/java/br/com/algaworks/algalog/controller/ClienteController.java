@@ -1,7 +1,6 @@
 package br.com.algaworks.algalog.controller;
 
 import br.com.algaworks.algalog.domain.model.Cliente;
-import br.com.algaworks.algalog.domain.model.repositories.ClienteRepository;
 import br.com.algaworks.algalog.domain.repositories.ClienteRepository;
 import br.com.algaworks.algalog.domain.services.ClienteService;
 import lombok.AllArgsConstructor;
